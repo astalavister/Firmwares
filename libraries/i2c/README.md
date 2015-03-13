@@ -46,8 +46,8 @@ If the device change, they need to be checked again.
 
 This library rely on the *system.h* header, which defines the oscillator settings. This library is made of a PLL clock of 48MHz, therefore the I2C clocking settings are based on PLL mode on as a primary oscillator.
 
-- ** void mainOsc(_t_pllmode, _t_clksource) ** uses a *PLL_ON* mode as a primary *CLK_PRI* oscillator
-- ** void secondOsc(_t_soscmode) ** not needed for this lib.
+- **void mainOsc(_t_pllmode, _t_clksource)** uses a *PLL_ON* mode as a primary *CLK_PRI* oscillator
+- **void secondOsc(_t_soscmode)** not needed for this lib.
 
 # Compiling
 
