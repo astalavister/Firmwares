@@ -212,14 +212,14 @@ void i2cSlaveHandler(uint8_t bus)
 		temp = _writeAdx;
 		i2c_read(0, bus);  //dummy read, empty the buff
 	}
-	else if (temp == DATA_W) { // write to DS
+	else if (temp == DATA_W) { 
 		temp = _writeData; //write to slave, i.e. receive
 	}
 	else if ((temp & MASK_BF_BIT) == ADX_R) {
 		temp = _readAdx;
 		i2c_read(0, bus); // empty the buff
 	}
-	else if (temp == DATA_R) { //read from DS, not needed to update the RTC timetable
+	else if (temp == DATA_R) { //read from slave
 		temp = _readData; // read from slave, i.e. transmit
 		i2c_read(0, bus); // empty the buff
 	}
@@ -233,52 +233,3 @@ void i2cSlaveHandler(uint8_t bus)
 
 #endif
 
-
-//
-//#if defined(__XC)
-//    #include <xc.h>         /* XC8 General Include File */
-//#elif defined(HI_TECH_C)
-//    #include <htc.h>        /* HiTech General Include File */
-//#elif defined(__18CXX)
-//    #include <p18cxxx.h>    /* C18 General Include File */
-//#endif
-//
-//#if defined(__XC) || defined(HI_TECH_C)
-//
-//#include <stdint.h>         /* For uint8_t definition */
-//#include <stdbool.h>        /* For true/false definition */
-//
-//#endif
-//
-//#include "i2c.h"
-//
-//
-//
-//void i2c_init(){
-//    SSP1CON1 = 0b00110110; // I2C I2C_SLAVE mode, 7-bit address. SSP enabled. CLK released
-//    SSP1ADD = SLAVE_ADDR<<1; // Indirizzo del DS1307
-//    //SSP1MSK = 0x01;
-//    SSP1CON2 = 0b00000000; //NOT Enables interrupt when a general call address (0000h) is received, not mask, not stretch
-//    PIR1bits.SSP1IF = 0; //interrupt after receive byte
-//    PIE1bits.SSP1IE = 1;
-//}
-//
-//
-//unsigned char i2c_read()
-//{
-// return( SSP1BUF );
-//}
-//
-///******************************************************************************************/
-//
-//void i2c_write( unsigned char i2cWriteData )
-//{
-//
-// //i2c_waitForIdle();
-// SSP1BUF = i2cWriteData;
-//}
-//
-//uint8_t getI2Cstatus(){
-//    return (SSP1STAT & SLAVE_STATUS);
-//}
-//
