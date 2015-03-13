@@ -1,3 +1,7 @@
 # Firmwares
-Contains libraries to be implemented in some microcontrollers. Each directory may contain the bare library not yet implemented in a full project, or either a full project. What matters is that is related on microcontroller's code.
-The license apply on the whole codes.
+Contains libraries developed with the goal to reuse them in personal projects. 
+The MIT license apply on the whole code, projects and libraries.
+
+Actual supported microcontroller family: 
+
+- Microchip PIC18
