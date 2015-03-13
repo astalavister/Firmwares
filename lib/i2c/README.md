@@ -1,4 +1,4 @@
-# PIC family I2C handling libraries, v1.0
+# PIC family I2C handling libraries 1.0
 
 I2C libraries for a PIC18FxxJ53 family. There is support now for only one bus, where are two in these devices. 
 It is released under MIT licence, inside LICENSE file in https://github.com/thexeno/Firmwares
