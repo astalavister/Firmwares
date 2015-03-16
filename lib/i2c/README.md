@@ -29,7 +29,7 @@ If the device change, they need to be checked again.
 
 - **void i2c_init (_t_i2c_mode mode, uint8_t bus)** initialize the module with a given baudrate is master, or a given address if slave.
 
-  - *mode* can be ```I2C_MASTER``` or ```I2C_SLAVE```. Every call will reset all previous initializations, allowing to swith the application from master to slave and viceversa.
+  - *mode* can be ```I2C_MASTER``` or ```I2C_SLAVE```. Every call will reset all previous initializations, allowing to switch the application from master to slave and viceversa.
   - *bus* can be either 0 or 1, depending on what hardware module is desired. In this version, only 0 is supported.
 
 - **SLAVE_ADDR** is self explanatory
