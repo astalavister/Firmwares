@@ -1,4 +1,5 @@
-/*
+/* The MIT License (MIT)
+ * Copyright (c) 2015 Enrico Sanino
 * File:   i2c.h
 * Author: Enrico Sanino
 *
@@ -24,15 +25,15 @@ extern "C" {
 	uint8_t temp;
 
 	/*I2C interaction defines, needed by functions that interact with the i2c*/
-#define SLAVE_ADDR 0x68
-#define SLAVE_STATUS 0b00101101
-#define ADX_W 0b00001001
-#define DATA_W 0b00101001
-#define ADX_R 0b00001100
-#define DATA_R 0b00101100
-#define ERR 0b00101100
-#define MASK_BF_BIT 0xFE
-#define UNMASK_S_BIT 0x08
+	#define SLAVE_ADDR 0x68
+	#define SLAVE_STATUS 0b00101101
+	#define ADX_W 0b00001001
+	#define DATA_W 0b00101001
+	#define ADX_R 0b00001100
+	#define DATA_R 0b00101100
+	#define ERR 0b00101100
+	#define MASK_BF_BIT 0xFE
+	#define UNMASK_S_BIT 0x08
 
 	uint8_t getI2Cstatus(uint8_t bus);
 #endif
