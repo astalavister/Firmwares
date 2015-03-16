@@ -1,3 +1,6 @@
+/* The MIT License (MIT)
+ * Copyright (c) 2015 Enrico Sanino */
+
 #if defined(__XC)
 #include <xc.h>         /* XC8 General Include File */
 #elif defined(HI_TECH_C)
