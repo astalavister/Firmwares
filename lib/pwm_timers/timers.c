@@ -79,7 +79,7 @@ void initTimer0(uint16_t prescaler, _t_bitmode bitmode, _t_edge edge, _t_timer_c
             break;
     }
     switch (clock){
-        case CLKOSC:
+        case CLKINST:
             T0CON &= ~(0x20); //T0CS bit
             break;
         case CLKPIN:
