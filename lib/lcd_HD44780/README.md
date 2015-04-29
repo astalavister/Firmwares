@@ -11,7 +11,7 @@ It is released under MIT licence, inside LICENSE file in https://github.com/thex
 There is a list of parameters which are used for the typical commands for this Hitachi display. They are related to the most used commands and data types used by the HD44780 standard. 
 These defines in the *lcd.h* are used to enable the specified function. Therefore, if **LCD_SETCGRAMADDR** is used, should be ORred with the address value. With this philosophy more parameters defined in the header can be orred together. For compatiblity reasons and simplicity, these values are extended in 16bit, to keep them aligned with the register interface of the display, which is 10bit wide.
 
-At the moment, it is not supported the display for using it as a general purpose RAM.
+At the moment, it is not supported the display for using it as a general purpose RAM, there no ready made initialization with 8bit interface and there are a lot of other possible optimizations.
 
 ##API
 
