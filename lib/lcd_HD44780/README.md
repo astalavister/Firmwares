@@ -42,10 +42,12 @@ Here are present the functions which should be modified when changing the hardwa
 - **void init_pPort_4bit(uint8_t inOut)** initialize the 4bit interface as input (inOut = 1) or output (inOut = 0).
 - **uint8_t pPort_4bit(uint8_t val)** write the val to the 4 bit port. If it was set as output, will return the value of 4 LSBs.
 
+
 # Compiling
 
 These libs are developed using the XC8 v1.20 compiler. Copy them in your project and include the *lcd.h* and *lcd_hal.h*. I've left these headers
 separated to have more flexibility. To redirect the output of standard libraries to the LCD, make sure that the *putch()* in the *lcd.h* is compiled instead of the default one.
+If using the PIC18F47J53 a proper initialization is needed, so include also the *user.c* and *user.h* to use the *initApp()*.
 
 
 
